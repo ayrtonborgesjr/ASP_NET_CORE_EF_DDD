@@ -2,8 +2,6 @@
 using System.Linq;
 using Aplicacao.Servico.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using SistemaVenda.DAL;
-using SistemaVenda.Models;
 
 namespace SistemaVenda.Controllers
 {

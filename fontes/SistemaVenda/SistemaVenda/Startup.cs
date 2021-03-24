@@ -35,7 +35,6 @@ namespace SistemaVenda
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
-            services.AddDbContext<SistemaVenda.DAL.ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MyStock")));
             services.AddDbContext<Repositorio.DAL.ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MyStock")));
             services.AddHttpContextAccessor();
             services.AddSession();

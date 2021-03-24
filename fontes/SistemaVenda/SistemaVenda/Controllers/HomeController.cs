@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SistemaVenda.DAL;
+using Repositorio.DAL;
 using SistemaVenda.Models;
 using System.Diagnostics;
 

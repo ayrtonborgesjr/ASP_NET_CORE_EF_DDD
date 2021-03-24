@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SistemaVenda.DAL;
+using Repositorio.DAL;
 using SistemaVenda.Helpers;
 using SistemaVenda.Models;
 using System.Linq;
