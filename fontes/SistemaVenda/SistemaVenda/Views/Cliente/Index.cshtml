@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+}
+
+@model List<SistemaVenda.Models.ClienteViewModel>;
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<table class="table table-bordered">
+    <thead>
+        <tr style="background-color:#f6f6f6">
+            <th width="15%">Código</th>
+            <th width="30%">Nome</th>
+            <th width="15%">CNPJ/CPF</th>
+            <th width="20%">E-mail</th>
+            <th width="20%">Celular</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr onclick="Editar(@item.Codigo)" style="cursor:pointer";>
+                <td>@item.Codigo</td>
+                <td>@item.Nome</td>
+                <td>@item.CNPJ_CPF</td>
+                <td>@item.Email</td>
+                <td>@item.Celular</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<button type="button" class="btn btn-block btn-primary" onclick="Cadastrar()">Cadastrar Cliente</button>
+
+<script>
+    function Editar(codigo) {
+        Request("Cadastro\\" + codigo);
+    }
+    function Cadastrar() {
+        Request("Cadastro");
+    }
+    function Request(request){
+        window.location = window.origin + "\\Cliente\\" + request;
+    }
+</script>
